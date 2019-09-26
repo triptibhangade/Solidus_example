@@ -1,3 +1,9 @@
+PATH
+  remote: ../solidus_image_editor
+  specs:
+    solidus_image_editor (0.0.1)
+      solidus_core
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -371,6 +377,7 @@ DEPENDENCIES
   selenium-webdriver
   solidus
   solidus_auth_devise
+  solidus_image_editor!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

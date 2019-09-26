@@ -68,3 +68,5 @@ gem 'mysql2'
 gem 'solidus'
 gem 'solidus_auth_devise'
 
+#Solidus image_editor Extension
+gem 'solidus_image_editor', :path => '../solidus_image_editor'
