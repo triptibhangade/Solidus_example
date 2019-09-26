@@ -64,3 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #mysql
 gem 'mysql2'
 
+#solidus
+gem 'solidus'
+gem 'solidus_auth_devise'
+
