@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_26_054887) do
+ActiveRecord::Schema.define(version: 2019_09_26_114310) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -443,6 +443,7 @@ ActiveRecord::Schema.define(version: 2019_09_26_054887) do
     t.datetime "updated_at", precision: 6
     t.boolean "promotionable", default: true
     t.string "meta_title"
+    t.integer "template_id"
     t.index ["available_on"], name: "index_spree_products_on_available_on"
     t.index ["deleted_at"], name: "index_spree_products_on_deleted_at"
     t.index ["name"], name: "index_spree_products_on_name"
@@ -1037,6 +1038,26 @@ ActiveRecord::Schema.define(version: 2019_09_26_054887) do
     t.index ["position"], name: "index_spree_taxons_on_position"
     t.index ["rgt"], name: "index_spree_taxons_on_rgt"
     t.index ["taxonomy_id"], name: "index_taxons_on_taxonomy_id"
+  end
+
+  create_table "spree_templates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.decimal "width", precision: 10
+    t.decimal "height", precision: 10
+    t.string "edges"
+    t.string "slug"
+    t.datetime "deleted_at"
+    t.string "name"
+    t.string "description"
+    t.string "background_color"
+    t.string "background_image_content_type"
+    t.string "background_image_file_name"
+    t.integer "resolution"
+    t.integer "number_of_images"
+    t.integer "number_of_text_boxes"
+    t.integer "background_image_file_size"
+    t.datetime "background_image_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "spree_unit_cancels", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

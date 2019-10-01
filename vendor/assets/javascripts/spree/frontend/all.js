@@ -8,3 +8,4 @@
 //= require rails-ujs
 //= require spree/frontend
 //= require_tree .
+//= require spree/frontend/solidus_image_editor
